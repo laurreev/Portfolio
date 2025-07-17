@@ -1,102 +1,53 @@
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="font-sans min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#232526] to-[#414345] fade-in">
+      <main className="w-full max-w-3xl metal-card flex flex-col items-center gap-8 shadow-xl">
+        <div className="flex flex-col items-center gap-4">
+          <Image
+            src="/vercel.svg"
+            alt="Logo"
+            width={64}
+            height={64}
+            className="drop-shadow-lg"
+            priority
+          />
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#FFD700] drop-shadow-lg transition-colors duration-500">Laurreev</h1>
+          <p className="text-lg md:text-xl text-gray-300 font-medium mt-2 text-center max-w-xl">Building advanced web experiences with a passion for design, code, and innovation.</p>
+        </div>
+        <div className="flex gap-4 mt-4">
+          <a href="#projects" className="metal-btn">View Projects</a>
+          <a href="#contact" className="metal-btn">Contact</a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <section id="projects" className="w-full max-w-3xl mt-16 fade-in">
+        <h2 className="text-2xl font-semibold text-[#FFD700] mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="metal-card">
+            <h3 className="text-xl font-bold mb-2 text-[#FFD700]">Project One</h3>
+            <p className="text-gray-300 mb-2">A showcase of a modern, animated portfolio project with a dark metal theme.</p>
+            <a href="#" className="metal-btn">View</a>
+          </div>
+          <div className="metal-card">
+            <h3 className="text-xl font-bold mb-2 text-[#FFD700]">Project Two</h3>
+            <p className="text-gray-300 mb-2">Another example project with professional transitions and a sleek look.</p>
+            <a href="#" className="metal-btn">View</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="w-full max-w-3xl mt-16 fade-in">
+        <h2 className="text-2xl font-semibold text-[#FFD700] mb-6">Contact</h2>
+        <form className="metal-card flex flex-col gap-4">
+          <input className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all" type="text" placeholder="Your Name" required />
+          <input className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all" type="email" placeholder="Your Email" required />
+          <textarea className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all" placeholder="Your Message" rows={4} required />
+          <button type="submit" className="metal-btn self-end">Send</button>
+        </form>
+      </section>
+      <footer className="mt-20 text-gray-500 text-sm text-center fade-in">
+        &copy; {new Date().getFullYear()} Laurreev. All rights reserved.
       </footer>
     </div>
   );

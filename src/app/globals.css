@@ -1,8 +1,13 @@
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #181A1B;
+  --foreground: #E0E0E0;
+  --metal-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
+  --accent: #8F9296;
+  --accent2: #3A3D40;
+  --highlight: #FFD700;
 }
 
 @theme inline {
@@ -12,15 +17,50 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background-image: var(--metal-gradient);
+  min-height: 100vh;
+  transition: background 0.7s cubic-bezier(0.4,0,0.2,1), color 0.4s;
+}
+
+.metal-card {
+  background: rgba(40, 42, 45, 0.85);
+  border: 1.5px solid var(--accent2);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25), 0 1.5px 0 0 var(--accent2);
+  padding: 2.5rem 2rem;
+  transition: box-shadow 0.4s, border 0.4s;
+}
+.metal-card:hover {
+  box-shadow: 0 8px 48px 0 #FFD70044, 0 2px 0 0 var(--highlight);
+  border: 1.5px solid var(--highlight);
+}
+
+.metal-btn {
+  background: var(--accent2);
+  color: var(--highlight);
+  border: 1.5px solid var(--highlight);
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px 0 #FFD70022;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+.metal-btn:hover {
+  background: var(--highlight);
+  color: #232526;
+  box-shadow: 0 4px 24px 0 #FFD70066;
+  border: 1.5px solid #232526;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
