@@ -7,9 +7,7 @@ export const metadata = {
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import dynamic from "next/dynamic";
-
-const AppBar = dynamic(() => import("./AppBar"), { ssr: false });
+import AppBar from "./AppBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
