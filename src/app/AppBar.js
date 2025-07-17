@@ -32,6 +32,16 @@ export default function AppBar() {
                 Projects
               </Link>
             </li>
+            <li className="border-b border-[#FFD700]/20 last:border-b-0">
+              <Link href="/skills" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+                Skills
+              </Link>
+            </li>
+            <li className="border-b border-[#FFD700]/20 last:border-b-0">
+              <Link href="/blog" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+                Blog
+              </Link>
+            </li>
             <li>
               <Link href="/contact" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
                 Contact
