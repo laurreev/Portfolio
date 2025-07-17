@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <div className="font-sans min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#232526] to-[#414345] fade-in">
@@ -10,8 +12,8 @@ export default function Contact() {
           <button type="submit" className="metal-btn self-end">Send</button>
         </form>
         <div className="flex gap-4 mt-4">
-          <a href="/" className="metal-btn">Home</a>
-          <a href="/about" className="metal-btn">About</a>
+          <Link href="/" className="metal-btn">Home</Link>
+          <Link href="/about" className="metal-btn">About</Link>
         </div>
       </main>
     </div>

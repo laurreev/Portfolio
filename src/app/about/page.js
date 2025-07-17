@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -14,10 +15,10 @@ export default function About() {
           priority
         />
         <p className="text-lg text-gray-300 text-center max-w-xl">
-          Hi! I'm Laurreev, a passionate web developer focused on building advanced, visually stunning web experiences. I love working with modern technologies and creating beautiful, functional interfaces.
+          Hi! I&apos;m Laurreev, a passionate web developer focused on building advanced, visually stunning web experiences. I love working with modern technologies and creating beautiful, functional interfaces.
         </p>
         <div className="flex gap-4 mt-4">
-          <a href="/" className="metal-btn">Home</a>
+          <Link href="/" className="metal-btn">Home</Link>
           <a href="#contact" className="metal-btn">Contact</a>
         </div>
       </main>
