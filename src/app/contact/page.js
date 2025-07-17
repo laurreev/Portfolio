@@ -39,7 +39,7 @@ export default function Contact() {
             Your message:
             <textarea name="message" className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]" placeholder="Your Message" rows={4} required disabled={submitting} />
           </label>
-          {/* Add more fields here if needed */}
+          {/* Add fields here if needed */}
           <button type="submit" className="metal-btn self-end transition-transform duration-300 hover:scale-105 hover:shadow-2xl" disabled={submitting}>
             {submitting ? "Sending..." : "Send"}
           </button>
