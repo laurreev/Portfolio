@@ -1,8 +1,4 @@
 "use client";
-export const metadata = {
-  title: "Laurreev",
-  description: "Portfolio of Dlanor Domingo",
-};
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
