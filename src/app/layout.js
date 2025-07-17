@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Laurreev",
+  description: "Portfolio of Dlanor Domingo",
+};
 
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -24,6 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AppBar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
