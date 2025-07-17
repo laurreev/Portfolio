@@ -1,7 +1,9 @@
+
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,24 +45,24 @@ function AppBar() {
         {open && (
           <ul className="absolute right-0 mt-2 bg-gradient-to-br from-[#232526] to-[#414345] border border-[#FFD700] rounded-xl shadow-2xl min-w-[160px] text-base animate-fadeInMenu overflow-hidden">
             <li className="border-b border-[#FFD700]/20 last:border-b-0">
-              <a href="/" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+              <Link href="/" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="border-b border-[#FFD700]/20 last:border-b-0">
-              <a href="/about" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+              <Link href="/about" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
                 About
-              </a>
+              </Link>
             </li>
             <li className="border-b border-[#FFD700]/20 last:border-b-0">
-              <a href="/projects" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+              <Link href="/projects" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
+              <Link href="/contact" className="block px-5 py-3 transition-all duration-200 hover:bg-[#FFD700] hover:text-[#232526] font-semibold text-[#FFD700]" onClick={() => setOpen(false)}>
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         )}
