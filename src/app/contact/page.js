@@ -12,9 +12,8 @@ export default function Contact() {
     setSubmitting(true);
     const form = formRef.current;
     const data = new FormData(form);
-    const res = await fetch("https://formspree.io/f/mvgqgzgl", {
+    const res = await fetch("/api/contact", {
       method: "POST",
-      headers: { Accept: "application/json" },
       body: data,
     });
     setSubmitting(false);
@@ -31,7 +30,6 @@ export default function Contact() {
       <main className="w-full max-w-xl metal-card flex flex-col items-center gap-8 shadow-xl">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#FFD700] drop-shadow-lg transition-colors duration-500 mb-2">Contact</h1>
         <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
-          <input type="hidden" name="_subject" value="New Professional Inquiry from Laurreev Portfolio" />
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Full Name:
             <input
@@ -57,7 +55,7 @@ export default function Contact() {
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Subject:
             <input
-              name="Topic"
+              name="Subject"
               type="text"
               className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]"
               placeholder="Subject of your message"
