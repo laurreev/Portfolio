@@ -67,7 +67,7 @@ export default function Contact() {
           >
             Formspree
           </a>{' '}
-          for email delivery. Replace the action URL with your Formspree endpoint.
+          for email delivery.
         </p>
       </main>
     </div>
