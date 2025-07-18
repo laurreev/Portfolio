@@ -86,7 +86,11 @@ export default function Contact() {
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/60">
             <div className="bg-[#232526] border border-[#FFD700] rounded-xl p-8 shadow-2xl flex flex-col items-center">
               <span className="text-2xl mb-2 text-[#FFD700]">✅</span>
-              <p className="text-gray-200 mb-4">Your message has been submitted successfully.<br />Thank you for reaching out!</p>
+              <p className="text-gray-200 mb-4">
+                Your message has been submitted successfully.<br />
+                Thank you for reaching out!<br />
+                <span className="block mt-2 text-sm text-[#FFD700]">You will receive an automatic confirmation email shortly. Please check your inbox (and spam folder).</span>
+              </p>
               <button className="metal-btn" onClick={() => setDialogOpen(false)}>Close</button>
             </div>
           </div>
@@ -96,16 +100,7 @@ export default function Contact() {
           <Link href="/about" className="metal-btn">About</Link>
         </div>
         <p className="text-xs text-gray-400 mt-2">
-          This form uses{' '}
-          <a
-            href="https://formspree.io"
-            className="underline text-[#FFD700] hover:text-white transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Formspree
-          </a>{' '}
-          for email delivery.
+          Your message is delivered securely and directly to Laurreev Portfolio via encrypted email.
         </p>
       </main>
     </div>
