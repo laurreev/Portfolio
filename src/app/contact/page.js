@@ -35,7 +35,7 @@ export default function Contact() {
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Full Name:
             <input
-              name="name"
+              name="Name"
               type="text"
               className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]"
               placeholder="Your Full Name"
@@ -46,7 +46,7 @@ export default function Contact() {
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Email Address:
             <input
-              name="email"
+              name="Email"
               type="email"
               className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]"
               placeholder="your@email.com"
@@ -57,7 +57,7 @@ export default function Contact() {
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Subject:
             <input
-              name="topic"
+              name="Topic"
               type="text"
               className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]"
               placeholder="Subject of your message"
@@ -68,7 +68,7 @@ export default function Contact() {
           <label className="flex flex-col gap-1 text-gray-200 font-medium">
             Message:
             <textarea
-              name="message"
+              name="Message"
               className="p-3 rounded bg-[#232526] text-gray-200 border border-[#FFD700] focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300 hover:scale-[1.03]"
               placeholder="Please enter your message here..."
               rows={5}
